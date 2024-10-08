@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .stopwatch-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="stopwatch-container">
+        <h3>Stop Watch</h3>
+        <h1 id="time">00:00</h1>
+        <button onclick="startClock()">Start</button>
+        <button onclick="stopClock()">Stop</button>
+        <button onclick="resetClock()">Reset</button>
+    </div>
+    <script src="index.js"></script> 
+</body>
+</html>
